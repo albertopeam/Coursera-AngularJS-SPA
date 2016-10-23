@@ -74,12 +74,12 @@
               class="form-control"
               placeholder="Enter your menu number favorite"
               name="favorite"
-              ng-model="signupCtrl.signup.favorite"
-              required>
-        <span ng-if="signupForm.favorite.$invalid && signupForm.favorite.$touched">
+              ng-model="signupCtrl.signup.favorite">
+        <!--      required>
+        span ng-if="signupForm.favorite.$invalid && signupForm.favorite.$touched">
           Favorite is required
           <br>
-        </span>
+        </span-->
         <span ng-show="signupCtrl.favoriteHasError()">
           {{signupCtrl.favError}}
           <br>
