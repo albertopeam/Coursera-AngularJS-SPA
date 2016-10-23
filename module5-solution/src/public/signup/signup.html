@@ -26,10 +26,9 @@
               placeholder="Enter your lastname"
               name="lastname"
               ng-model="signupCtrl.signup.lastname"
-              required
-              minLength=4>
-        <span ng-if="(signupForm.lastname.$error.minLength || signupForm.lastname.$error.required) &&
-                      signupForm.lastname.$touched">
+              required>
+        <span ng-if="signupForm.lastname.$error.required &&
+                     signupForm.lastname.$touched">
             Lastname is required
         </span>
 
