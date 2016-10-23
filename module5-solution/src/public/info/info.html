@@ -1,0 +1,33 @@
+<br>
+<br>
+<div ng-show="infoCtrl.isSigned()" class="center">
+  <h1>My Info:</h1>
+  <div class="form-group">
+    <label class="control-label col-sm-12">First name: {{infoCtrl.getUser().name}}</label>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-12">Lastname: {{infoCtrl.getUser().lastname}}</label>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-12">Email: {{infoCtrl.getUser().email}}</label>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-12">Phone: {{infoCtrl.getUser().phone}}</label>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-12">Menu favorite: {{infoCtrl.getUser().favorite.name}}</label>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-12">Menu favorite: {{infoCtrl.getUser().favorite.description}}</label>
+  </div>
+  <div class="form-group">
+    <img class="img-responsive center-image" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.getUser().favorite.short_name}}.jpg" alt="{{infoCtrl.getUser().favorite.name}}">
+  </div>
+</div>
+<div ng-show="!infoCtrl.isSigned()" class="center">
+  <h2>Not Signed Up Yet.</h2>
+  <br>
+  <a ui-sref="public.signup" class="btn btn-default">Sign up Now!</a>
+</div>
+<br>
+<br>

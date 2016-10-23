@@ -3,6 +3,11 @@
 
 angular.module('MenuApp')
   .component("categories", {
+    /*
+    best option to avoid use another template!!!
+    template: '<categories list="ctrl.categories"></categories>',
+    */
+    template:
     templateUrl: 'src/app/categories/categories.template.html',
     bindings: {
       categories: '<'
